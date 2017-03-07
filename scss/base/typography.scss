@@ -7,15 +7,13 @@ $font-family-sans-serif: Helvetica;
 $font-family-serif: Georgia;
 $font-family-monospace: Courier;
 
-// We use these to define default font weights
-$font-weight-normal: normal;
-$font-weight-bold: bold;
-
 // Use these to control various global styles
-$body-bg: $dark-gray;
-$body-font-color: $dark-gray;
 $body-font-family: $font-family-sans-serif;
-$body-font-style: normal;
+$body-primary-color: $dark-gray;
+$body-secondary-color: $medium-gray;
+$body-accent-color: $secondary-accent;
+$body-disabled-color: $medium-gray;
+
 
 // headers
 $header-font-family: Montserrat;
@@ -30,16 +28,10 @@ $h6-font-size: 1rem;
 // Sketch setup
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
-* {
+[name ~="p"] {
     font-size: $rem-base;
-    color: $body-font-color;
+    color: $body-primary-color;
     font-family: $body-font-family;
-    font-style: $body-font-style;
-}
-
-[type="artboard"] {
-    background-color: $body-bg;
 }
 
 [name~="h1"],
@@ -53,7 +45,7 @@ $h6-font-size: 1rem;
 
 [name~="h1"] {
     font-size: $h1-font-size;
-    color: $primary-color;
+    color: $tertiary-color;
 }
 
 [name~="h2"] {
@@ -68,17 +60,17 @@ $h6-font-size: 1rem;
 
 [name~="h4"] {
     font-size: $h4-font-size;
-    color: $body-font-color;
+    color: $body-primary-color;
 }
 
 [name~="h5"] {
     font-size: $h5-font-size;
-    color: $body-font-color;
+    color: $body-primary-color;
 }
 
 [name~="h6"] {
     font-size: $h6-font-size;
-    color: $body-font-color;
+    color: $body-primary-color;
     text-transform: uppercase;
 }
 
@@ -86,3 +78,24 @@ $h6-font-size: 1rem;
 // Utility classes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+.notes {
+    color: $black !important;
+}
+
+.body-primary-color {
+    color: $body-primary-color !important;
+    background-color: $body-primary-color !important;
+}
+.body-secondary-color {
+    color: $body-secondary-color !important;
+    background-color: $body-secondary-color !important;
+}
+.body-accent-color {
+    color: $body-accent-color !important;
+    background-color: $body-accent-color !important;
+}
+
+.body-disabled-color {
+    color: $body-disabled-color !important;
+    background-color: $body-disabled-color !important;
+}
