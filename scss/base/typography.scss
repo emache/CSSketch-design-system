@@ -28,7 +28,7 @@ $h6-font-size: 1rem;
 // Sketch setup
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-[name ~="p"] {
+* {
     font-size: $rem-base;
     color: $body-primary-color;
     font-family: $body-font-family;
