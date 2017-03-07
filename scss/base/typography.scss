@@ -15,43 +15,16 @@ $font-weight-bold: bold;
 $body-bg: $dark-gray;
 $body-font-color: $dark-gray;
 $body-font-family: $font-family-sans-serif;
-$body-font-weight: $font-weight-bold;
 $body-font-style: normal;
 
-// ----------
+// headers
 $header-font-family: Montserrat;
-// $header-font-weight: $global-weight-normal;
-// $header-font-style: normal;
-// $header-color: inherit;
-// $header-lineheight: 1.4;
-// $header-margin-bottom: 0.5rem;
-
-// $header-styles: (
-//   small: (
-//     'h1': ('font-size': 24),
-//     'h2': ('font-size': 20),
-//     'h3': ('font-size': 19),
-//     'h4': ('font-size': 18),
-//     'h5': ('font-size': 17),
-//     'h6': ('font-size': 16),
-//   ),
-//   medium: (
-//     'h1': ('font-size': 48),
-//     'h2': ('font-size': 40),
-//     'h3': ('font-size': 31),
-//     'h4': ('font-size': 25),
-//     'h5': ('font-size': 20),
-//     'h6': ('font-size': 16),
-//   ),
-// );
-
-
-// //typography style settings
-// text-transform
-// letter-spacing
-// font-size
-
-
+$h1-font-size: 2.75rem;
+$h2-font-size: 2.3rem;
+$h3-font-size: 1.7rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.125rem;
+$h6-font-size: 1rem;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 // Sketch setup
@@ -62,7 +35,6 @@ $header-font-family: Montserrat;
     font-size: $rem-base;
     color: $body-font-color;
     font-family: $body-font-family;
-    font-weight: $body-font-weight;
     font-style: $body-font-style;
 }
 
@@ -80,28 +52,34 @@ $header-font-family: Montserrat;
 }
 
 [name~="h1"] {
-    // font-size: $h1-font-size;
-    // color: $notes-color;
+    font-size: $h1-font-size;
+    color: $primary-color;
 }
 
 [name~="h2"] {
-    // font-size: $h2-font-size;
+    font-size: $h2-font-size;
+    color: $primary-color;
 }
 
 [name~="h3"] {
-    // font-size: $h3-font-size;
+    font-size: $h3-font-size;
+    color: $primary-color;
 }
 
 [name~="h4"] {
-    // font-size: $h4-font-size;
+    font-size: $h4-font-size;
+    color: $body-font-color;
 }
 
 [name~="h5"] {
-    // font-size: $h5-font-size;
+    font-size: $h5-font-size;
+    color: $body-font-color;
 }
 
 [name~="h6"] {
-    // font-size: $h6-font-size;
+    font-size: $h6-font-size;
+    color: $body-font-color;
+    text-transform: uppercase;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - -
