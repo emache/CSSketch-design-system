@@ -1,0 +1,114 @@
+// Colors
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Define Base Colours
+
+$pink: #FD60B4;
+$blue: #98C7FB;
+$orange: #FEC36D;
+$lime: #DBDE76;
+$purple: #9E89F3;
+$red: #FF6E6B;
+$aqua: #49D0BE;
+$violet: #D985EB;
+
+$flash-pink: #F800FF;
+$flash-green: #00FF3B;
+
+// Grays.
+// The number represents the color brightness on HSB scale (mostly to represent the colours)
+// The higher the number, the lighter the color
+
+$gray-10: #11171A;
+$gray-20: #263034;
+$gray-35: #485459;
+$gray-50: #6E7A80;
+$gray-60: #879399;
+$gray-70: #A1ADB3;
+$gray-80: #B8C6CC;
+$gray-85: #C5D3D9;
+$gray-90: #D8E2E6;
+$gray-95: #EBF0F2;
+
+
+// Color Wrapper
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// We use these for the name of the classes
+// and for all other styles in the document
+
+// Grays color wrappers
+$grayscale : (  'light-gray': $gray-95,
+                'medium-gray': $gray-80,
+                'dark-gray': $gray-35,
+                'black': $gray-10,
+                'white': #ffffff);
+
+
+// Key Color wrappers
+$color-palette : (  'primary-color': $blue,
+                    'secondary-color': $orange,
+                    'tertiary-color': $violet,
+                    'primary-accent': $pink,
+                    'secondary-accent': $aqua,
+                    'tertiary-accent': $lime,
+
+                    'success-color': $aqua,
+                    'warning-color': $orange,
+                    'alert-color': $red,
+
+                    'notes-color': $flash-pink,
+                    'bounding-box-color': $flash-green );
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Utility classes for Sketch
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@each $color-name, $color-value in $grayscale {
+    .#{$color-name} {
+        color: $color-value !important;
+        background-color: $color-value !important;
+    }
+}
+
+@each $color-name, $color-value in $color-palette {
+    .#{$color-name} {
+        color: $color-value !important;
+        @if ($color-name == 'bounding-box-color') {
+            background-color: transparentize($color-value, 0.5) !important;
+            border: 1px solid $color-value !important;
+        } @else {
+            background-color: $color-value !important;
+        }
+    }
+}
+
+@each $color-name, $color-value in $color-palette {
+    .#{$color-name} {
+        color: $color-value !important;
+        background-color: $color-value !important;
+    }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Internal variables used for colors
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$light-gray: get-color('light-gray', $grayscale);
+$medium-gray: get-color('medium-gray', $grayscale);
+$dark-gray: get-color('dark-gray', $grayscale);
+$black: get-color('black', $grayscale);
+$white: get-color('white', $grayscale);
+
+
+$primary-color: get-color('primary-color', $color-palette);
+$secondary-color: get-color('secondary-color', $color-palette);
+$tertiary-color: get-color('tertiary-color', $color-palette);
+$primary-accent: get-color('primary-accent', $color-palette);
+$secondary-accent: get-color('secondary-accent', $color-palette);
+$tertiary-accent: get-color('tertiary-accent', $color-palette);
+$success-color: get-color('success-color', $color-palette);
+$warning-color: get-color('warning-color', $color-palette);
+$alert-color: get-color('alert-color', $color-palette);
+$notes-color: get-color('notes-color', $color-palette);
+$bounding-box-color: get-color('bounding-box-color', $color-palette);
