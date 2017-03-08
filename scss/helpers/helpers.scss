@@ -6,3 +6,18 @@
     @error 'given $key is not available in $color-palette';
   }
 }
+
+// retrieve color from $colors by calling `color(base, primary)`
+// color variant is optional
+@function color($color-name, $color-variant:null) {
+  @if ($color-variant != null) {
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  } @else {
+    @if ( type-of( map-get($colors, $color-name)) == color ) {
+        @return map-get($colors, $color-name);
+    } @else {
+        @return map-get(map-get($colors, $color-name), 'base');
+    }
+
+  }
+}
