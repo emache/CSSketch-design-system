@@ -8,11 +8,11 @@ $font-family-serif: Georgia;
 $font-family-monospace: Courier;
 
 // Use these to control various global styles
-$body-font-family: $font-family-sans-serif;
-$body-primary-color: $dark-gray;
-$body-secondary-color: $medium-gray;
-$body-accent-color: $secondary-accent;
-$body-disabled-color: $medium-gray;
+$body-font-family: Helvetica;
+$body-primary-color: color('black');
+$body-secondary-color: color(medium-gray);
+$body-accent-color: color(secondary-accent, darker);
+$body-disabled-color: color(medium-gray);
 
 
 // headers
@@ -45,17 +45,17 @@ $h6-font-size: 1rem;
 
 [name~="h1"] {
     font-size: $h1-font-size;
-    color: $tertiary-color;
+    color: color(primary-color, darker);
 }
 
 [name~="h2"] {
     font-size: $h2-font-size;
-    color: $primary-color;
+    color: color(primary-color, darker);
 }
 
 [name~="h3"] {
     font-size: $h3-font-size;
-    color: $primary-color;
+    color: color(tertiary-color, darker);
 }
 
 [name~="h4"] {
@@ -79,7 +79,7 @@ $h6-font-size: 1rem;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .notes {
-    color: $black !important;
+    color: color('black') !important;
 }
 
 .body-primary-color {
