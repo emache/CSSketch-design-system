@@ -12,7 +12,6 @@ $body-font-family: Helvetica;
 $body-primary-color: color('black');
 $body-secondary-color: color(medium-gray);
 $body-accent-color: color(secondary-accent, darker);
-$body-disabled-color: color(medium-gray);
 
 
 // headers
@@ -78,10 +77,6 @@ $h6-font-size: 1rem;
 // Utility classes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.notes {
-    color: color('black') !important;
-}
-
 .body-primary-color {
     color: $body-primary-color !important;
     background-color: $body-primary-color !important;
@@ -93,9 +88,4 @@ $h6-font-size: 1rem;
 .body-accent-color {
     color: $body-accent-color !important;
     background-color: $body-accent-color !important;
-}
-
-.body-disabled-color {
-    color: $body-disabled-color !important;
-    background-color: $body-disabled-color !important;
 }

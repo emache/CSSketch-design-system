@@ -50,22 +50,22 @@ $colors: (
 
     'primary-color' : (
         'base': $blue,
-        'lighter': lighten($blue,15%),
-        'lightest': lighten($blue,30%),
+        'lighter': lighten($blue,10%),
+        'lightest': lighten($blue,15%),
         'darker': darken($blue, 15%),
         'darkest': darken($blue, 50%)
     ),
     'secondary-color' : (
         'base':$orange,
-        'lighter': lighten($orange,15%),
-        'lightest': lighten($orange,30%),
+        'lighter': lighten($orange,10%),
+        'lightest': lighten($orange,18%),
         'darker': darken($orange, 15%),
         'darkest': darken($orange, 50%)
     ),
     'tertiary-color' : (
         'base': $violet,
         'lighter': lighten($violet,15%),
-        'lightest': lighten($violet,30%),
+        'lightest': lighten($violet,20%),
         'darker': darken($violet, 15%),
         'darkest': darken($violet, 50%)
     ),
