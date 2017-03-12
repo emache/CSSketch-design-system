@@ -27,10 +27,44 @@ $h6-font-size: 1rem;
 // Sketch setup
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-* {
+*, body, [name~="p"], .copy-body {
     font-size: $rem-base;
     color: $body-primary-color;
     font-family: $body-font-family;
+}
+
+.copy-body__link {
+    @extend .copy-body;
+    color: color(primary-accent);
+}
+
+.copy-body-caption {
+    font-size: 0.85rem;
+}
+
+.copy-body-caption__link {
+    @extend .copy-body-caption;
+    color: color(primary-accent);
+}
+
+.copy-body-secondary {
+    font-size: $rem-base;
+    color: $body-secondary-color;
+    font-family: $body-font-family;
+}
+
+.copy-body-secondary__link {
+    @extend .copy-body-secondary;
+    color: color(secondary-accent) !important;
+}
+
+.copy-feature {
+    font-size: 1.2rem;
+    color: $body-primary-color;
+}
+
+small, .copy-body-small {
+    font-size: 0.75rem;
 }
 
 [name~="h1"],
