@@ -12,8 +12,8 @@ $body-font-family: Helvetica;
 $body-primary-color: color('black');
 $body-secondary-color: color(medium-gray);
 $body-accent-color: color(secondary-accent, darker);
-
-
+$font-size-small : 0.75rem;
+$font-size-large: 1.2rem;
 // headers
 $header-font-family: Montserrat;
 $h1-font-size: 2.75rem;
@@ -59,12 +59,12 @@ $h6-font-size: 1rem;
 }
 
 .copy-feature {
-    font-size: 1.2rem;
+    font-size: $font-size-large;
     color: $body-primary-color;
 }
 
 small, .copy-body-small {
-    font-size: 0.75rem;
+    font-size: $font-size-small
 }
 
 [name~="h1"],

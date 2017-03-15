@@ -1,0 +1,74 @@
+.btn {
+    min-width: 200px;
+    height: 4rem;
+    color: $body-primary-color;
+    background-color: transparent;
+    border: 1px solid $body-primary-color;
+}
+
+.btn-small {
+    min-width: 100px;
+    height: 3rem;
+}
+
+.btn-large {
+    min-width: 300px;
+    height: 5rem;
+}
+
+.btn-text {
+    color: color("white");
+    &.btn-small {
+        font-size: $font-size-small;
+    }
+    &.btn-large {
+        font-size: $font-size-large;
+    }
+}
+
+.btn-primary {
+    color: color("white");
+    background-color: color(primary-color);
+    border-color: color(primary-color, darkest);
+    &.hover, &:hover {
+        background-color: color(primary-color, darker);
+    }
+}
+
+.btn-success {
+    color: color("white");
+    background-color: color(success-color);
+    border-color: darken(color(success-color), 15%);
+    &.hover, &:hover {
+        background-color: darken(color(success-color),15%);
+    }
+}
+
+.btn-disabled {
+    color: color(medium-gray);
+    background-color: color(light-gray);
+    border-color: color(medium-gray);
+}
+
+.btn-warning {
+    color: color("white");
+    background-color: color(warning-color);
+    border-color: darken(color(warning-color), 15%);
+    &.hover, &:hover {
+        background-color: darken(color(warning-color),15%);
+    }
+}
+
+.btn-alert {
+    color: color("white");
+    background-color: color(alert-color);
+    border-color: darken(color(alert-color), 15%);
+
+    &.hover, &:hover {
+        background-color: darken(color(alert-color),15%);
+    }
+}
+
+.btn-outline {
+    background-color: transparent !important;
+}
