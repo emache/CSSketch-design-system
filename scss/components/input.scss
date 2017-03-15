@@ -1,0 +1,72 @@
+[name~="input"] {
+    height: 50px;
+    width: 350px;
+    border: 1px solid $body-secondary-color;
+    background: transparent;
+    &.focus {
+        border-color: color(primary-color);
+    }
+    &.isValid {
+        border-color: color(success-color);
+    }
+    &.isInvalid {
+        border-color: color(alert-color);
+    }
+
+}
+
+[name~="input-text"] {
+    left: 20px;
+    color: $body-primary-color;
+    &.placeholder {
+        color: $body-secondary-color;
+    }
+}
+
+.input-icon.left ~ [name~="input-text"] {
+    left: 60px;
+}
+
+.input-btn.left ~ [name~="input-text"] {
+    left: 110px;
+}
+
+.input-icon {
+    top: 12px;
+    &.left {
+        left: 20px;
+    }
+    &.right {
+        left: 310px;
+    }
+}
+
+.input-btn {
+    width: 100px;
+    @extend .btn-primary;
+    &.left {
+        left: 0px;
+    }
+
+    &.right {
+        left: 250px;
+    }
+}
+
+.input-label {
+    text-transform: uppercase;
+    color: $body-primary-color;
+}
+
+.input-label ~ [name~="input"] {
+    top: 50px;
+}
+
+.input-validation-msg {
+    @extend .copy-body-small;
+    top: 110px;
+}
+
+.input-group {
+    margin-bottom: 200px;
+}
