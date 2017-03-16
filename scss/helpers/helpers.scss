@@ -1,12 +1,3 @@
-@function get-color($key, $palette) {
-  @if map-has-key($palette, $key) {
-    @return map-get($palette, $key);
-  }
-  @else {
-    @error 'given $key is not available in $color-palette';
-  }
-}
-
 // retrieve color from $colors by calling `color(base, primary)`
 // color variant is optional
 @function color($color-name, $color-variant:null) {
@@ -20,3 +11,34 @@
         }
     }
 }
+
+@mixin reset {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+// Yosemite & older support
+@mixin flexbox {
+    display: -webkit-flex;
+    display: flex;
+}
+
+// Yosemite & older support
+@mixin display-flex {
+    display: -webkit-flex;
+    display: flex;
+}
+
+// Yosemite & older support
+@mixin display-inline-flex {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+// Yosemite & older support
+@mixin flex-direction($direction: row) {
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
