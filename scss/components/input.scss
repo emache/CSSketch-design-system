@@ -1,7 +1,7 @@
 [name~="input"] {
     height: 50px;
     width: 350px;
-    border: 1px solid $body-secondary-color;
+    border: 1px solid $body-secondary;
     background: transparent;
     &.focus {
         border-color: color(primary-color);
@@ -17,9 +17,9 @@
 
 [name~="input-text"] {
     left: 20px;
-    color: $body-primary-color;
+    color: $body-primary;
     &.placeholder {
-        color: $body-secondary-color;
+        color: $body-secondary;
     }
 }
 
@@ -55,7 +55,7 @@
 
 .input-label {
     text-transform: uppercase;
-    color: $body-primary-color;
+    color: $body-primary;
 }
 
 .input-label ~ [name~="input"] {
@@ -63,7 +63,7 @@
 }
 
 .input-validation-msg {
-    @extend .copy-body-small;
+    @extend .body-small;
     top: 110px;
 }
 

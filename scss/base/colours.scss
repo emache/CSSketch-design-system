@@ -6,12 +6,9 @@ $pink: #FD60B4;
 $blue: #98C7FB;
 $orange: #FEC36D;
 $lime: #DBDE76;
-$purple: #9E89F3;
 $red: #FF6E6B;
 $aqua: #49D0BE;
 $violet: #D985EB;
-$flash-pink: #F800FF;
-$flash-green: #00FF3B;
 
 // Grays.
 // The number represents the color brightness.
@@ -35,19 +32,38 @@ $gray-95: #EBF0F2;
 
 // Key Color wrappers
 $colors: (
-    'light-gray': $gray-95,
+    'documentation': #F800FF,
+    'bounding-box': #00FF3B,
+
+    'light-gray': $gray-90,
     'medium-gray': $gray-80,
     'dark-gray': $gray-35,
     'black': $gray-10,
     'white': #ffffff,
 
-    'success-color': $aqua,
-    'warning-color': $orange,
-    'alert-color': $red,
+    'body-background-color' : $gray-95,
 
-    'notes-color': $flash-pink,
-    'bounding-box-color': $flash-green,
-
+    'success-color': (
+        'base':$aqua,
+        'lighter': lighten($aqua,10%),
+        'lightest': lighten($aqua,18%),
+        'darker': darken($aqua, 15%),
+        'darkest': darken($aqua, 50%)
+    ),
+    'warning-color': (
+        'base':$orange,
+        'lighter': lighten($orange,10%),
+        'lightest': lighten($orange,18%),
+        'darker': darken($orange, 15%),
+        'darkest': darken($orange, 50%)
+    ),
+    'alert-color': (
+        'base':$red,
+        'lighter': lighten($red,10%),
+        'lightest': lighten($red,18%),
+        'darker': darken($red, 15%),
+        'darkest': darken($red, 50%)
+    ),
     'primary-color' : (
         'base': $blue,
         'lighter': lighten($blue,10%),
@@ -56,11 +72,11 @@ $colors: (
         'darkest': darken($blue, 50%)
     ),
     'secondary-color' : (
-        'base':$orange,
-        'lighter': lighten($orange,10%),
-        'lightest': lighten($orange,18%),
-        'darker': darken($orange, 15%),
-        'darkest': darken($orange, 50%)
+        'base':$pink,
+        'lighter': lighten($pink,10%),
+        'lightest': lighten($pink,18%),
+        'darker': darken($pink, 15%),
+        'darkest': darken($pink, 50%)
     ),
     'tertiary-color' : (
         'base': $violet,
@@ -69,12 +85,12 @@ $colors: (
         'darker': darken($violet, 15%),
         'darkest': darken($violet, 50%)
     ),
-    'primary-accent' : (
-        'base': $pink,
-        'lighter': lighten($pink,15%),
-        'lightest': lighten($pink,30%),
-        'darker': darken($pink, 15%),
-        'darkest': darken($pink, 50%)
+    'accent-color' : (
+        'base': $lime,
+        'lighter': lighten($lime,15%),
+        'lightest': lighten($lime,30%),
+        'darker': darken($lime, 15%),
+        'darkest': darken($lime, 50%)
     ),
     'secondary-accent' : (
         'base': $aqua,

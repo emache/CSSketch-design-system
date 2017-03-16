@@ -9,13 +9,20 @@ $font-family-monospace: Courier;
 
 // Use these to control various global styles
 $body-font-family: Helvetica;
-$body-primary-color: color('black');
-$body-secondary-color: color(medium-gray);
-$body-accent-color: color(secondary-accent, darker);
-$font-size-small : 0.75rem;
+$body-primary: color('black');
+$body-secondary: transparentize($body-primary, 0.5);
+$body-hint: transparentize($body-primary, 0.7);
+$body-accent: color(accent-color, darker);
+
+
+$font-size-small : 0.80rem;
 $font-size-large: 1.2rem;
+
 // headers
 $header-font-family: Montserrat;
+$header-primary: color(primary-color);
+$header-secondary: $body-primary;
+
 $h1-font-size: 2.75rem;
 $h2-font-size: 2.3rem;
 $h3-font-size: 1.7rem;
@@ -27,44 +34,57 @@ $h6-font-size: 1rem;
 // Sketch setup
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-*, body, [name~="p"], .copy-body {
+*, body, [name~="p"], .body-text {
     font-size: $rem-base;
-    color: $body-primary-color;
+    color: $body-primary;
     font-family: $body-font-family;
+    letter-spacing: auto;
 }
 
-.copy-body__link {
-    @extend .copy-body;
-    color: color(primary-accent);
+.body-primary{
+    @extend .body-text;
+    background-color: $body-primary !important;
 }
 
-.copy-body-caption {
-    font-size: 0.85rem;
-}
-
-.copy-body-caption__link {
-    @extend .copy-body-caption;
-    color: color(primary-accent);
-}
-
-.copy-body-secondary {
+.body-secondary {
     font-size: $rem-base;
-    color: $body-secondary-color;
+    color: $body-secondary;
     font-family: $body-font-family;
+    color: $body-secondary !important;
+    background-color: $body-secondary !important;
 }
 
-.copy-body-secondary__link {
-    @extend .copy-body-secondary;
-    color: color(secondary-accent) !important;
+.body-accent {
+    color: $body-accent !important;
+    background-color: $body-accent !important;
 }
 
-.copy-feature {
+.body-hint, .body-disabled {
+    color: $body-hint;
+    background-color: $body-hint;
+}
+
+.body-link {
+    @extend .body-primary;
+    color: color(accent-color);
+}
+
+.body-caption {
+    font-size: 0.90rem;
+}
+
+.body-caption-link {
+    @extend .body-caption;
+    color: color(accent-color);
+}
+
+.body-feature {
     font-size: $font-size-large;
-    color: $body-primary-color;
+    color: $body-primary;
 }
 
-small, .copy-body-small {
-    font-size: $font-size-small
+small, [name~="small"], .body-small {
+    font-size: $font-size-small;
 }
 
 [name~="h1"],
@@ -78,48 +98,43 @@ small, .copy-body-small {
 
 [name~="h1"] {
     font-size: $h1-font-size;
-    color: color(primary-color, darker);
+    color: $header-primary;
 }
 
 [name~="h2"] {
     font-size: $h2-font-size;
-    color: color(primary-color, darker);
+    color: $header-secondary;
 }
 
 [name~="h3"] {
     font-size: $h3-font-size;
-    color: color(tertiary-color, darker);
+    color: $header-secondary;
 }
 
 [name~="h4"] {
     font-size: $h4-font-size;
-    color: $body-primary-color;
+    color: $header-secondary;
 }
 
 [name~="h5"] {
     font-size: $h5-font-size;
-    color: $body-primary-color;
+    color: $header-secondary;
 }
 
 [name~="h6"] {
     font-size: $h6-font-size;
-    color: $body-primary-color;
+    color: $body-primary;
     text-transform: uppercase;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - -
-// Utility classes
-// - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.body-primary {
-    color: $body-primary-color !important;
-    background-color: $body-primary-color !important;
+.header-primary{
+    color: $header-primary;
+    background-color: $header-primary;
 }
-.body-secondary {
-    color: $body-secondary-color !important;
-    background-color: $body-secondary-color !important;
+
+.header-secondary{
+    color: $header-secondary;
+    background-color: $header-secondary;
 }
-.body-accent {
-    color: $body-accent-color !important;
-    background-color: $body-accent-color !important;
-}
+
