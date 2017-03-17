@@ -15,7 +15,8 @@ $body-hint: transparentize($body-primary, 0.7);
 $body-accent: color(accent-color, darker);
 
 
-$font-size-small : 0.80rem;
+$font-size-x-small : 0.80rem;
+$font-size-small : 0.90rem;
 $font-size-large: 1.2rem;
 
 // headers
@@ -70,7 +71,7 @@ $h6-font-size: 1rem;
 }
 
 .body-caption {
-    font-size: 0.90rem;
+    font-size: $font-size-small;
 }
 
 .body-caption-link {
@@ -84,7 +85,7 @@ $h6-font-size: 1rem;
 }
 
 small, [name~="small"], .body-small {
-    font-size: $font-size-small;
+    font-size: $font-size-x-small;
 }
 
 [name~="h1"],

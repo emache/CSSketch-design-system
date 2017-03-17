@@ -1,33 +1,43 @@
+@mixin btn-bg {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .btn {
-    min-width: 200px;
+    @include display-inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
     height: 4rem;
-    color: $body-primary;
-    background-color: transparent;
-    border: 1px solid $body-primary;
-}
+    width: auto;
+    min-width: 200px;
 
-.btn-small {
-    min-width: 100px;
-    height: 3rem;
-}
+    &.btn-small {
+        min-width: 100px;
+        height: 2rem;
+        .btn-text {
+            font-size: $font-size-small;
+        }
+    }
 
-.btn-large {
-    min-width: 300px;
-    height: 5rem;
+    &.btn-large {
+        min-width: 300px;
+        height: 5rem;
+        .btn-text {
+            font-size: $font-size-large;
+        }
+    }
 }
 
 .btn-text {
+    @include reset;
     color: color("white");
-    &.btn-small {
-        font-size: $font-size-small;
-    }
-    &.btn-large {
-        font-size: $font-size-large;
-    }
 }
 
 .btn-primary {
-    color: color("white");
+    @include btn-bg;
     background-color: color(primary-color);
     border-color: color(primary-color, darkest);
     &.hover, &:hover {
@@ -36,21 +46,16 @@
 }
 
 .btn-success {
-    color: color("white");
+    @include btn-bg;
     background-color: color(success-color);
-    border-color: darken(color(success-color), 15%);
+    border-color: color(success-color, darker);
     &.hover, &:hover {
-        background-color: darken(color(success-color),15%);
+        background-color: color(success-color, darker);
     }
 }
 
-.btn-disabled {
-    color: color(medium-gray);
-    background-color: color(light-gray);
-    border-color: color(medium-gray);
-}
-
 .btn-warning {
+    @include btn-bg;
     color: color("white");
     background-color: color(warning-color);
     border-color: darken(color(warning-color), 15%);
@@ -60,15 +65,15 @@
 }
 
 .btn-alert {
-    color: color("white");
+    @include btn-bg;
     background-color: color(alert-color);
     border-color: darken(color(alert-color), 15%);
-
     &.hover, &:hover {
         background-color: darken(color(alert-color),15%);
     }
 }
 
 .btn-outline {
+    @include btn-bg;
     background-color: transparent !important;
 }
