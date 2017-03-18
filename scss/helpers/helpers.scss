@@ -42,3 +42,13 @@
     flex-direction: $direction;
 }
 
+// Base reset for block components which include a background or background container
+// Buttons, input fields, ...
+
+@mixin block-bg {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
