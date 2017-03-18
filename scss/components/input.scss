@@ -1,56 +1,100 @@
-[name~="input"] {
-    height: 50px;
-    width: 350px;
+.input-field {
+    @include display-inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    height: 4rem;
+    min-width: 350px;
+    width: auto;
+
+    &.with-icon-left {
+        .icon {
+            @include reset;
+            order: -1;
+            margin-right: 20px;
+        }
+    }
+
+    &.with-icon-right {
+        justify-content: space-between;
+        .icon {
+            @include reset;
+            order: 2;
+        }
+    }
+
+    &.with-addon-left {
+        padding: 0px;
+        .input-addon {
+            @extend .btn;
+            @include reset;
+            order: -1;
+            min-width: 70px !important;
+            margin-right: 20px;
+        }
+    }
+    &.with-addon-right {
+        padding-right: 0px;
+        justify-content: space-between;
+        .input-addon {
+            @extend .btn;
+            @include reset;
+            order: 2;
+            min-width: 70px !important;
+            // margin-right: 0px;
+        }
+    }
+}
+
+.input-bg, .textarea-bg {
+    @include block-bg;
     border: 1px solid $body-secondary;
     background: transparent;
+
     &.focus {
         border-color: color(primary-color);
     }
     &.isValid {
         border-color: color(success-color);
     }
-    &.isInvalid {
+    &.notValid {
         border-color: color(alert-color);
     }
-
 }
 
-[name~="input-text"] {
-    left: 20px;
+.input-text {
+    @include reset;
     color: $body-primary;
     &.placeholder {
         color: $body-secondary;
     }
-}
 
-.input-icon.left ~ [name~="input-text"] {
-    left: 60px;
-}
-
-.input-btn.left ~ [name~="input-text"] {
-    left: 110px;
-}
-
-.input-icon {
-    top: 12px;
-    &.left {
-        left: 20px;
-    }
-    &.right {
-        left: 310px;
+    &.align-bottom{
+        // align-self: flex-end;
     }
 }
 
-.input-btn {
-    width: 100px;
-    @extend .btn-primary;
-    &.left {
-        left: 0px;
-    }
+.addon-content {
+    @extend .btn-text
+}
 
-    &.right {
-        left: 250px;
-    }
+.addon-bg {
+    @include block-bg;
+    background-color: color(primary-color);
+    border: 1px solid color(primary-color,darkest);
+    width: 150px;
+}
+
+.textarea {
+    @include display-inline-flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    height: 12rem;
+    min-width: 350px;
+    width: auto;
 }
 
 .input-label {
@@ -65,8 +109,4 @@
 .input-validation-msg {
     @extend .body-small;
     top: 110px;
-}
-
-.input-group {
-    margin-bottom: 200px;
 }
