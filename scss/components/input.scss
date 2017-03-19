@@ -97,16 +97,27 @@
     width: auto;
 }
 
+
+.input-group {
+    @include display-inline-flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
 .input-label {
     text-transform: uppercase;
     color: $body-primary;
+    order: -1;
 }
 
-.input-label ~ [name~="input"] {
+.input-label ~ .input-field {
+    @include reset;
+    order: 1;
     top: 50px;
 }
 
 .input-validation-msg {
     @extend .body-small;
-    top: 110px;
+    top: 130px;
 }
