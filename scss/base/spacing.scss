@@ -1,0 +1,81 @@
+$spacing-xxxs: $rem-base/2;
+$spacing-xxs: $spacing-xxxs * 2;
+$spacing-xs: $spacing-xxxs * 3;
+$spacing-s: $spacing-xxxs * 4;
+$spacing-m: $spacing-xxxs * 5;
+$spacing-l: $spacing-xxxs * 6;
+$spacing-xl: $spacing-xxxs * 7;
+$spacing-xxl: $spacing-xxxs * 8;
+$spacing-xxxl: $spacing-xxxs * 9;
+
+$spacing-hide: false;
+$spacing-opacity: 0.5;
+
+@if ($spacing-hide) {
+    $spacing-opacity: 1;
+} @else {
+    $spacing-opacity: 0.5;
+}
+
+.spacing-xxxs {
+    width: $spacing-xxxs;
+    height: $spacing-xxxs;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
+
+.spacing-xxs {
+    width: $spacing-xxs;
+    height: $spacing-xxs;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
+
+.spacing-xs {
+    width: $spacing-xs;
+    height: $spacing-xs;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
+
+.spacing-s {
+    width: $spacing-s;
+    height: $spacing-s;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
+
+.spacing-m {
+    width: $spacing-m;
+    height: $spacing-m;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
+
+.spacing-l {
+    width: $spacing-l;
+    height: $spacing-l;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
+
+.spacing-xl {
+    width: $spacing-xl;
+    height: $spacing-xl;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
+
+.spacing-xxl {
+    width: $spacing-xxl;
+    height: $spacing-xxl;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
+
+.spacing-xxxl {
+    width: $spacing-xxxl;
+    height: $spacing-xxxl;
+    background-color: transparentize(color(bounding-box), $spacing-opacity);
+    border: 1px solid (color(bounding-box));
+}
